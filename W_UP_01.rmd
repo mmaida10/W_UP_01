@@ -23,13 +23,13 @@ mydata <- read.csv(file="pushups.csv")
 
 Create an Rstudio project in your shared space on rstudio.cloud.  Using the dataset called push-ups from the tigerstats package in R; answer the question posed by this null and alternate hypothesis in an html markdown document.
 
-The goal of this data analysis was to discover how the amount of push-ups a football player could do in two minutes would correlate to their position on the field. We divided the roles of football players on the field into two different categories: players whose position forced them to run around were "skill" players, while positions that required more body mass were "line" players. The hypothesis of this experiment is that there was a clear correlation between the average number of push-ups line and skill player could do in a 2-minute sitting.  
+The goal of this data analysis was to discover how the amount of push-ups a football player could do in two minutes would correlate to their position on the field. We divided the roles of football players on the field into two different categories: players whose position forced them to run around were "skill" players, while positions that required more body mass were "line" players.  
   
-$H_A$: The average number of pushups done by line players is statistically different than that of skill players.  
+The hypothesis of this experiment was that there was a clear correlation between the average number of push-ups line and skill player could do in a 2-minute sitting.  
+-   $H_A$: The average number of push-ups done by line players is statistically different than that of skill players.  
 
 In contrast, the null hypothesis predicts little to no difference between the averages.  
-  
-$H_0$: There is no difference between the average number of push-ups of line vs skill players.  
+-   $H_0$: There is no difference between the average number of push-ups of line vs skill players.  
 
 # Methods
 
@@ -69,9 +69,9 @@ While the skill players deviated more than the skill players in the amount of pu
 ```{r}
 t.test(pushups~position, data=mydata)
 ```
-The P-value is 0.000009421. Because this value is so small, we reject the null hypothesis. Skill players can do more pushups on average in two minutes than can line players.
+The P-value is 0.000009421. This P-value indicates the chance of the null hypothesis being correct; there is a 0.0009421% that the null hypothesis is correct. Because this value is so small, we reject the null hypothesis. Skill players can do more push-ups on average in two minutes than the line players can.
 
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhaps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 The original question was whether or not there is a difference between the average number of push-ups that skill and line players can do. To find the differences, we plotted a box plot. To find the averages, we calculated the numerical summaries. The skill players can do more pushups in 2 minutes than the line players.
